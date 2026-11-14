@@ -1,0 +1,69 @@
+.converter-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.hex-input {
+  width: 100%;
+  padding: 18px 18px 18px 25px; 
+  text-align: left; 
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hex-input::before {
+  content: '#';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #666;
+  pointer-events: none; /* Чтобы # не мешал кликам в поле */
+  z-index: 1;
+}
+
+.hex-input {
+  padding-left: 30px; 
+}
+
+.hex-input:focus {
+  border-color: #666;
+  box-shadow: 0 0 0 3px rgba(102, 102, 102, 0.1);
+}
+
+.rgb-output {
+  width: 100%;
+  padding: 18px;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.rgb-output.error {
+  border-color: #dc3545;
+  color: #dc3545;
+  background-color: #fff5f5;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
